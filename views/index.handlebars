@@ -1,0 +1,65 @@
+<div class="container">
+
+    <div class="jumbotron">
+    </div><!-- /jumbotron -->
+
+        <div class="container2">
+            <h1>Of all the place we could of chosen it had to be this place?</h1>
+            <br>
+            <br>
+            <h2>Do you want something? You should probably go somewhere else for better quality...</h2>
+            <br>
+            <panel>
+                <form class="create-form">
+                    <div class="form-group">
+                        <label for="createBurger">I guess if you have to eat make it here or something...you should have went someplace else</label>
+                        <input type="text" id="createBurger" name="burger">
+                        {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+                        <button type="submit" class="btn btn-success" id="addburger"></button>
+                    </div>
+                </form>
+            </panel>
+        </div>
+
+
+    <div class="row">
+        <!-- Undevoured Burgers -->
+        <div class="newList col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>New Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <button type="button" class="eatBurger btn btn-warning" data-id="{{this.id}}" data-newDevoured="{{devour}}"></button>
+                                <hr>
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Devoured Burgers -->
+        <div class="col-sm-6">
+            <div class="destroy panel panel-default">
+                <div class="panel-heading"><strong>Devoured Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <button type="button" class="devourBurger btn btn-danger" id ="destroybutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"></button>
+                                <hr>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- /row -->
+
+          <a href="https://github.com/welljer/burger" class="btn btn-primary mr-2" target="_blank">GitHub Repo</a>
+
+
+</div><!-- /container -->

@@ -1,0 +1,57 @@
+body{
+    background-color: #9dc100;
+}
+
+.jumbotron{
+    background-image: url("../images/dumpster.jpg" );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+    
+}
+
+.container2, h1, h2{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: red;
+    padding: .25rem;
+    background-color: #000000;
+    border-radius: .75rem;
+    margin-bottom: 2rem;
+}
+
+#colorOverride{
+    color: #FF6347;
+}
+
+#addburger{
+    color:#89a203;
+    padding: .9rem;
+}
+
+.newList{
+    background-color: #89a203;
+    border-radius: .75rem;
+    color: #c0c0c0;
+    padding: .9rem;
+    margin-bottom: 2rem;
+}
+
+#eatBurger{
+    float: right;
+    padding: .9rem;
+}
+
+.destroy{
+    opacity: .8;
+    background-color: #D8BFD8;
+    border-radius: .75rem;
+    color: #000000;
+    padding: .9rem;
+    margin-bottom: 2rem;
+}
+
+#destroybutton{
+    float: right;
+    padding: .9rem;
+}
